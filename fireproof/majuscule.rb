@@ -4,26 +4,24 @@ if (ARGV.length < 1)
   exit
 end
 
-#récup ARGV et converti en string l'entrée
-#avec ARGV[0] ou ARGV.join(" ")
-#my_str=ARGV[0]
+my_str=ARGV[0].downcase #met tout en minuscule
 
-#converti string en tableau de char
-#arr_char=my_str.split("")
-
-#my_str en plus simple
-my_str=ARGV[0].split("")
-
-=begin
-boucle pour itération sur chaque char de my_str
-converti en majuscule 1 char sur 2
-=end
 i=0
+result="" #créer un str pour le résultat
 
+#boucle si espace, copie tel quel, sinon met 1 lettre sur 2 en majuscule
 while i < my_str.length
-    print my_str[i].upcase if i.odd?
-    print my_str[i].downcase if i.even?
+       if (my_str[i] == " ")
+        result << my_str[i]
+        i+=1
+        end
+    result << my_str[i]
+    i += 1
+       if (my_str[i] == " ")
+       result << my_str[i]
+       i+=1
+       end
+    result << my_str[i].to_s.upcase
     i += 1
 end
-
-print "\n"
+puts result
