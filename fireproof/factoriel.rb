@@ -1,4 +1,4 @@
-if (ARGV.length < 1)
+if (ARGV.length != 1)
   puts "#{__FILE__} requires one argument: #{__FILE__} number"
   exit
 end
