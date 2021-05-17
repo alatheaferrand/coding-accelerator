@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 if (ARGV.length < 2)
+=======
+if (ARGV.length < 1)
+>>>>>>> e7d1632521890a23bb1e2c37ac15a236d49acccb
   puts "#{__FILE__} requires two arguments: #{__FILE__} 'file1.txt' 'file2.txt' "
   exit
 end
